@@ -1,0 +1,16 @@
+.item-list-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+  }
+  
+.item-list-container img {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+  }
+  
+.item-list-container p {
+    margin-left: 10px;
+  }

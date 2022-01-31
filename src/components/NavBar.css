@@ -1,0 +1,18 @@
+ul{
+    display: flex;
+    justify-content: center;
+}
+ul li {
+    list-style: none;
+    margin-right: 2rem;
+}
+
+.bar {
+    display: flex;
+    justify-content: center;
+}
+
+.buttons {
+    display: flex;
+    align-items: center;
+}
