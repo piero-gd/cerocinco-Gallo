@@ -1,6 +1,6 @@
 import React from "react"
 import './NavBar.css'
-import logo from '../img/logo.jpeg'
+import logo from '../images/logo.jpeg'
 import CartWidget from "./CartWidget"
 
 export default function NavBar() {

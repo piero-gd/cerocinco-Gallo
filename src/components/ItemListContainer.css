@@ -1,6 +1,6 @@
 .item-list-container {
     display: flex;
-    align-items: center;
+    justify-content: center;
     margin-bottom: 20px;
     flex-wrap: wrap;
   }
@@ -10,7 +10,9 @@
     width: 200px;
     height: 200px;
   }
-  
-.item-list-container p {
+
+  /*
+.item-list-container h3 {
     margin-left: 10px;
   }
+  */

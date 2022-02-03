@@ -1,0 +1,47 @@
+.container-button {
+    border-style:ridge;
+    border-radius: 5px;
+    padding: 10px;
+    margin-inline: 44%;
+}
+
+
+.container-add-substract {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 2px;
+    font-size: 17px;
+}
+
+.container-add-substract p {
+    margin-inline: 10px;
+}
+
+.container-add-substract button {
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    font-size: 17px;
+}
+
+.add {
+    background-color:rgb(4, 204, 240);
+    color: black;
+    border: none;
+    border-radius: 7px;
+    padding: 5px;
+    font-size: 19px;
+}
+
+.disabled {
+    background-color:rgb(4, 204, 240);
+    color: black;
+    border: none;
+    border-radius: 7px;
+    padding: 5px;
+    font-size: 19px;
+    opacity: 0.3;
+}

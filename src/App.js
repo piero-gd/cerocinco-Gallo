@@ -1,8 +1,7 @@
 import './App.css';
-import NavBar from './components/NavBar';
-import AccountInfo from './components/AccountInfo';
-import ImageEstefania from './img/estefania-400x400.jpeg'
-import ImagePoloBlanco from './img/polo-blanco-basico.jpg'
+import NavBar from './components/NavBar'
+import ItemCount from './components/ItemCount'
+import ImagePoloBlanco from './images/polo-blanco-basico.jpg'
 import ItemListContainer from './components/ItemListContainer'
 
 
@@ -11,10 +10,11 @@ function App() {
     <div className="App">
       <div>
         <NavBar />
-        <h3>Artículos</h3>
+        {/*<h3>Artículos</h3>*/}
         <ItemListContainer
-        imgSrc={ImagePoloBlanco}
-        greeting="Polo Blanco Básico Cerocinco"/>
+        //imgSrc={ImagePoloBlanco}
+        greeting="Bienvenido al Catálogo Cerocinco!"/>
+        <ItemCount stock={6} initial={0} />
       </div>
 
       {/*
