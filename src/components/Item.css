@@ -1,0 +1,9 @@
+.item{
+    border-style:ridge;
+    border-radius: 5px;
+}
+
+.item img {
+    width: 300px;
+    height: 320px;
+}

@@ -1,7 +1,7 @@
 import './App.css';
 import NavBar from './components/NavBar'
 import ItemCount from './components/ItemCount'
-import ImagePoloBlanco from './images/polo-blanco-basico.jpg'
+//import ImagePoloBlanco from './images/polo-blanco-basico.jpg'
 import ItemListContainer from './components/ItemListContainer'
 
 
