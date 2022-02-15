@@ -2,6 +2,7 @@ import React from "react"
 import './NavBar.css'
 import logo from '../images/logo.jpeg'
 import CartWidget from "./CartWidget"
+import { NavLink } from "react-router-dom"
 
 export default function NavBar() {
     return (
@@ -18,9 +19,15 @@ export default function NavBar() {
                     <li>
                         <a className="btn btn-info" href="/category/gorras">Gorras</a>
                     </li>
+                    <li>
+
+                    </li>
                 </ul>
-                <CartWidget />
-                <span>5</span>
+                <NavLink to="/cart">
+                    <CartWidget />
+                    <span>5</span>
+                </NavLink>
+
             </div>
         </div>
     )

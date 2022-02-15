@@ -14,7 +14,6 @@ function ItemDetailContainer() {
     const [item, setItem] = useState()
     const { itemId } = useParams()
 
-
     useEffect(() => {
         getItems.then(function (items) {
             const it = items.find((i) => i.id === Number(itemId))
@@ -39,7 +38,6 @@ function ItemDetailContainer() {
             ) : (
                 <>
                     <ItemDetail item={item} />
-                    <ItemCount stock={6} initial={0} />
                 </>
             )}
         </div>
