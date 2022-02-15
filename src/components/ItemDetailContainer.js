@@ -4,7 +4,7 @@ import { useEffect, useState } from "react"
 import { getItems } from '../api/products'
 import ItemDetail from './ItemDetail'
 import { useParams } from 'react-router-dom'
-
+import ItemCount from './ItemCount'
 
 // Ir a buscar con el getItem la lista de productos
 // Filtrar 1 producto (elegir cualquiera)
@@ -12,32 +12,35 @@ import { useParams } from 'react-router-dom'
 // Pasarle ese producto al componente ItemDetail.js
 function ItemDetailContainer() {
     const [item, setItem] = useState()
-    //const { itemId } = useParams()
+    const { itemId } = useParams()
 
-    /*
+
     useEffect(() => {
-        getItems().then((items) => {
-            const item = items.find((i) => i.id === 2)
-            setItem(item)
+        getItems.then(function (items) {
+            const it = items.find((i) => i.id === Number(itemId))
+            setItem(it)
         }).catch((error) => {
             console.log(error)
         });
-    }, []);
-    */
+    }, [itemId]);
+    /*
     useEffect(() => {
-        async function buscarProductos() {
-            const items = await getItems()
-
-            items.find((i) => i.id === 2)
-        }
-    })
-
+        (async () => {
+            var items = await getItems()
+            const item = items.find((i) => i.id === Number(itemId))
+            setItem(item)
+        })()
+    }, [])
+    */
     return (
         <div className='item-detail-container'>
             {!item ? (
                 <p>Cargando producto...</p>
             ) : (
-                <ItemDetail item={item} />
+                <>
+                    <ItemDetail item={item} />
+                    <ItemCount stock={6} initial={0} />
+                </>
             )}
         </div>
     )

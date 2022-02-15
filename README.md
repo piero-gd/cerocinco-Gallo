@@ -2,6 +2,9 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+El objetivo de mi proyecto fue crear una aplicación web para una tienda de ropa con nombre CeroCinco, tienda que vende artículos divididos en
+categorías como polos, gorras, etc. que será útil para cumplir con lo exigido en el curso.
+
 ## Available Scripts
 
 In the project directory, you can run:

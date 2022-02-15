@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react"
 import './ItemListContainer.css'
 import { getItems } from '../api/products'
 import ItemList from './ItemList'
+import { useParams } from "react-router-dom"
 
 // La función de este componente es obtener la lista de productos.
 // Guardarla en un estado propio (useState)
@@ -9,12 +10,14 @@ import ItemList from './ItemList'
 function ItemListContainer({ greeting, imgSrc }) {
     const [items, setItems] = useState([])
     const [loading, setLoading] = useState(true)
+    const { catId } = useParams()
 
     //tarea pesada (cuando se monta el componente)
     useEffect(() => {
         getItems
             .then((res) => {
-                setItems(res)
+                catId ? setItems(res.filter(product => product.category === catId))
+                    : setItems(res)
             })
             .catch((error) => {
                 console.error(error)
@@ -22,18 +25,20 @@ function ItemListContainer({ greeting, imgSrc }) {
             .finally(() => {
                 setLoading(false)
             })
-    }, []);
+    }, [catId]);
 
     //console.log(items)
 
     return (
-        <div className="item-list-container">
+        <div>
             {loading ? (
                 <h1>Cargando...</h1>
             ) : (
                 <>
                     <h3 id="greeting">{greeting}</h3>
-                    <ItemList items={items} />
+                    <div className="item-list-container">
+                        <ItemList items={items} />
+                    </div>
                 </>
             )}
         </div>

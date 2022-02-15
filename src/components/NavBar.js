@@ -6,17 +6,17 @@ import CartWidget from "./CartWidget"
 export default function NavBar() {
     return (
         <div className="bar">
-            <img src={logo} />
+            <a href="/"><img src={logo} /></a>
             <div className="buttons">
                 <ul>
                     <li>
-                        <a className="btn btn-info" href="">Poleras</a>
+                        <a className="btn btn-info" href="/category/Poleras">Poleras</a>
                     </li>
                     <li>
-                        <a className="btn btn-info" href="">Polos</a>
+                        <a className="btn btn-info" href="/category/polos">Polos</a>
                     </li>
                     <li>
-                        <a className="btn btn-info" href="">Gorras</a>
+                        <a className="btn btn-info" href="/category/gorras">Gorras</a>
                     </li>
                 </ul>
                 <CartWidget />

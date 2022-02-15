@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import './ItemCount.css';
 
-const ItemCount = ({ stock, initial }) => {
+const ItemCount = ({ stock, initial, onChangeItemCount }) => {
     const [number, setNumber] = useState(0)
 
     const add = () => {
@@ -12,8 +12,9 @@ const ItemCount = ({ stock, initial }) => {
         number > initial && setNumber(number -1)
     };
 
-    const onAdd = () => {
-        console.log(`Se agregaron al carrito ${number} items`)
+    const onAdd = (event) => {
+        console.log(event.target.value)
+        onAdd(event.target.value)
     };
 
     return (

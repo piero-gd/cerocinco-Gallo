@@ -5,7 +5,7 @@ export const items = [
         stock: 10,
         price: 50,
         description: 'Polo estilo básico de color blanco',
-        img: './images/polo-blanco-basico.jpg',
+        img: '../images/polo-blanco-basico.jpg',
         category: 'polos'
     },
     {
@@ -14,7 +14,7 @@ export const items = [
         stock: 4,
         price: 50,
         description: 'Polo estilo básico de color gris',
-        img: './images/polo-gris-basico.jpg',
+        img: '../images/polo-gris-basico.jpg',
         category: 'polos'
     },{
         id: 3,
@@ -22,7 +22,7 @@ export const items = [
         stock: 9,
         price: 30,
         description: 'Gorra estilo básico de color blanco',
-        img: './images/gorra-blanca.jpg',
+        img: '../images/gorra-blanca.jpg',
         category: 'gorras'
     },{
         id: 4,
@@ -30,7 +30,7 @@ export const items = [
         stock: 14,
         price: 30,
         description: 'Gorra estilo básico de color gris',
-        img: './images/gorra-gris.jpg',
+        img: '../images/gorra-gris.jpg',
         category: 'gorras'
     },
 ]
