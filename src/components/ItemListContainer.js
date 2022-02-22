@@ -16,7 +16,9 @@ function ItemListContainer({ greeting, imgSrc }) {
     useEffect(() => {
         getItems
             .then((res) => {
-                catId ? setItems(res.filter(product => product.category === catId))
+                catId ? setItems(res.filter(product => {
+                    return product.category === catId
+                }))
                     : setItems(res)
             })
             .catch((error) => {
@@ -26,8 +28,6 @@ function ItemListContainer({ greeting, imgSrc }) {
                 setLoading(false)
             })
     }, [catId]);
-
-    //console.log(items)
 
     return (
         <div>

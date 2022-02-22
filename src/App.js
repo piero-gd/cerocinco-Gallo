@@ -5,7 +5,6 @@ import ItemDetailContainer from './components/ItemDetailContainer'
 import { Routes, Route, BrowserRouter } from 'react-router-dom'
 import Error from './components/Error/Error';
 import { CartContextProvider } from './context/CartContext'
-import { CartContext } from './context/CartContext';
 import Cart from './components/Cart';
 
 function App() {
@@ -17,7 +16,7 @@ function App() {
           <Routes>
             <Route path="/" element={<ItemListContainer greeting="Navegation Routing" />} />
             <Route path="/category/:catId" element={<ItemListContainer greeting="Navegation Routing" />} />
-            <Route path="/item/:itemId" element={<ItemDetailContainer />} />
+            <Route path="/item/:productId" element={<ItemDetailContainer />} />
             <Route path="/Cart" element={<Cart />} />
             <Route path="*" element={<Error></Error>} />
           </Routes>

@@ -4,7 +4,7 @@ import { CartContext } from '../context/CartContext'
 
 function Cart() {
     const { cart, vaciarCarrito, deleteItem } = useContext(CartContext)
-
+    
     return (
         //react.fragment
         <>
