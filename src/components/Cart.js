@@ -1,8 +1,11 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { Link } from "react-router-dom";
 import { CartContext } from '../context/CartContext'
 
 function Cart() {
+    const [name, setName] = useState('')
+    const [email, setEmail] = useState('')
+    
     const { cart, vaciarCarrito, deleteItem } = useContext(CartContext)
     
     return (

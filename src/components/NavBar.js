@@ -7,7 +7,7 @@ import { NavLink } from "react-router-dom"
 export default function NavBar() {
     return (
         <div className="bar">
-            <a href="/"><img src={logo} /></a>
+            <a href="/"><img src={logo} alt={"Logo"} /></a>
             <div className="buttons">
                 <ul>
                     <li>
