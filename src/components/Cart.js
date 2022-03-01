@@ -6,7 +6,7 @@ function Cart() {
     //const [name, setName] = useState('')
     //const [email, setEmail] = useState('')
     
-    const { cart, vaciarCarrito, deleteItem } = useContext(CartContext)
+    const { cart, vaciarCarrito, sumaTotal, cantUnidades, deleteItem } = useContext(CartContext)
     
     return (
         //react.fragment
@@ -22,12 +22,15 @@ function Cart() {
                 {cart.map((producto) => (
                     <div key={producto.id}>
                         <h3>{producto.name}</h3>
-                        <h3>{producto.cantidad}</h3>
+                        <h5>Precio unit: {producto.price}</h5>
+                        <h5>Cantidad: {producto.cantidad}</h5>
                         <button onClick={() => deleteItem(producto.id)}>
                             X
                         </button>
                     </div>
                 ))}
+                <h3>Total Unidades: {cantUnidades}</h3>
+                <h3>Monto Total: {sumaTotal}</h3>
                 <button onClick={vaciarCarrito}>Vaciar Carrito</button>
             </>
             )}

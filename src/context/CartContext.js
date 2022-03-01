@@ -4,6 +4,9 @@ export const CartContext = createContext([])
 
 export const CartContextProvider = ({ children }) => {
     const [cart, setCart] = useState([])
+    const [sumaTotal, setSumaTotal] = useState(0)
+    const [cantUnidades, setCantUnidades] = useState(0)
+    
 
     const addToCart = (cantidad, item) => {
         if (isOnCart(item.id)){
@@ -11,6 +14,8 @@ export const CartContextProvider = ({ children }) => {
         } else {
             setCart([...cart, {...item, cantidad}])
         }
+        sumarTotal()
+        sumarCantUnidades()
     }
 
 
@@ -29,6 +34,7 @@ export const CartContextProvider = ({ children }) => {
                 producto.cantidad += cantidad
             }
         })
+        setCart(copia)
     }
 
     const vaciarCarrito = () => {
@@ -41,11 +47,29 @@ export const CartContextProvider = ({ children }) => {
     }
 
     //sumar total del carrito (precio * cantidad)
-
+    const sumarTotal = () => {
+        var total = 0
+        const copia = [...cart]
+        console.log("PRUEBA1")
+        copia.forEach((producto) => {
+            total += producto.cantidad * producto.price
+            console.log("PRUEBA2")
+        })
+        setSumaTotal(total)
+    }
     //sumar la cantidad de unidades del carrito
+    const sumarCantUnidades = () => {
+        var cantUnidades = 0
+        const copia = [...cart]
+        copia.forEach((producto) => {
+            cantUnidades += producto.cantidad
+        })
+        setCantUnidades(cantUnidades)
+    }
+
 
     return (
-        <CartContext.Provider value={{cart, addToCart, vaciarCarrito, deleteItem}}>
+        <CartContext.Provider value={{cart, addToCart, vaciarCarrito, sumaTotal, cantUnidades, deleteItem}}>
             {children}
         </CartContext.Provider>
     )

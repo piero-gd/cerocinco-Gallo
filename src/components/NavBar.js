@@ -1,23 +1,31 @@
-import React from "react"
+import React, {useContext} from "react"
 import './NavBar.css'
 import logo from '../images/logo.jpeg'
 import CartWidget from "./CartWidget"
-import { NavLink } from "react-router-dom"
+import { NavLink, Link } from "react-router-dom"
+import { CartContext } from '../context/CartContext'
+
+
 
 export default function NavBar() {
+
+    const { cart, vaciarCarrito, deleteItem } = useContext(CartContext)
+
     return (
         <div className="bar">
-            <a href="/"><img src={logo} alt={"Logo"} /></a>
+            <Link to={`/`}>
+                <img src={logo} alt={"Logo"} />
+            </Link>
             <div className="buttons">
                 <ul>
                     <li>
-                        <a className="btn btn-info" href="/category/Poleras">Poleras</a>
+                        <Link className="btn btn-info" to={`category/poleras`}>Poleras</Link>
                     </li>
                     <li>
-                        <a className="btn btn-info" href="/category/polos">Polos</a>
+                        <Link className="btn btn-info" to={`category/polos`}>Polos</Link>
                     </li>
                     <li>
-                        <a className="btn btn-info" href="/category/gorras">Gorras</a>
+                        <Link className="btn btn-info" to={`category/gorras`}>Gorras</Link>
                     </li>
                     <li>
 
@@ -25,7 +33,7 @@ export default function NavBar() {
                 </ul>
                 <NavLink to="/cart">
                     <CartWidget />
-                    <span>5</span>
+                    {cart.length === 0 ? null: cart.length}
                 </NavLink>
 
             </div>
