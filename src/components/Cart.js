@@ -6,7 +6,7 @@ function Cart() {
     //const [name, setName] = useState('')
     //const [email, setEmail] = useState('')
     
-    const { cart, vaciarCarrito, sumaTotal, cantUnidades, deleteItem } = useContext(CartContext)
+    const { cart, vaciarCarrito, sumarTotal, sumarCantUnidades, deleteItem } = useContext(CartContext)
     
     return (
         //react.fragment
@@ -29,8 +29,8 @@ function Cart() {
                         </button>
                     </div>
                 ))}
-                <h3>Total Unidades: {cantUnidades}</h3>
-                <h3>Monto Total: {sumaTotal}</h3>
+                <h3>Monto Total: {sumarTotal()}</h3>
+                <h5>Total Unidades: {sumarCantUnidades()}</h5>
                 <button onClick={vaciarCarrito}>Vaciar Carrito</button>
             </>
             )}

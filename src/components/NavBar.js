@@ -9,7 +9,7 @@ import { CartContext } from '../context/CartContext'
 
 export default function NavBar() {
 
-    const { cart, vaciarCarrito, deleteItem } = useContext(CartContext)
+    const { cart, vaciarCarrito, sumarCantUnidades, deleteItem } = useContext(CartContext)
 
     return (
         <div className="bar">
@@ -33,7 +33,7 @@ export default function NavBar() {
                 </ul>
                 <NavLink to="/cart">
                     <CartWidget />
-                    {cart.length === 0 ? null: cart.length}
+                    {sumarCantUnidades() === 0 ? null: sumarCantUnidades()}
                 </NavLink>
 
             </div>
