@@ -14,15 +14,11 @@ export const CartContextProvider = ({ children }) => {
         }
     }
 
-
-    //revisar si esta en el carrito
     const isOnCart = (id) => {
-        //itero el carrito y devuelvo un boolean
         const respuesta = cart.some((prod) => prod.id === id)
         return respuesta
     }
 
-    //sumar la cantidad
     const sumarCantidad = (cantidad, item) => {
         const copia = [...cart]
         copia.forEach((producto) => {
@@ -37,12 +33,10 @@ export const CartContextProvider = ({ children }) => {
         setCart([])
     }
 
-    //eliminar por item
     const deleteItem = (id) => {
         setCart(cart.filter((producto) => producto.id !== id))
     }
 
-    //sumar total del carrito (precio * cantidad)
     const sumarTotal = () => {
         var total = 0
         const copia = [...cart]
@@ -51,7 +45,7 @@ export const CartContextProvider = ({ children }) => {
         })
         return total
     }
-    //sumar la cantidad de unidades del carrito
+    
     const sumarCantUnidades = () => {
         var cantUnidades = 0
         const copia = [...cart]

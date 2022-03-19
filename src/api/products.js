@@ -8,7 +8,6 @@ export const getItems = new Promise((resolve, reject) => {
     getDocs(itemsCollection)
         .then(snapshot => {
 
-            // doc.data() archivo de Firestore, dame todos tus datos dentro del item
             // Mapeo mis productos
             const products = snapshot.docs.map((doc) => ({ id: doc.id, ...doc.data() }))
             resolve(products)
