@@ -46,10 +46,8 @@ export const CartContextProvider = ({ children }) => {
     const sumarTotal = () => {
         var total = 0
         const copia = [...cart]
-        console.log("PRUEBA1")
         copia.forEach((producto) => {
             total += producto.cantidad * producto.price
-            console.log("PRUEBA2")
         })
         return total
     }

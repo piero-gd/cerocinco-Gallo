@@ -1,0 +1,29 @@
+.cart-container{
+    border: groove;
+    border-radius: 8px;
+    padding: 30px;
+    margin-inline: 50px;
+    display: inline-table;
+}
+
+.item-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 20px;
+}
+
+#item-img{
+    width: 80px;
+}
+
+.item-element{
+    margin-inline: 30px;
+}
+
+.form-container{
+    margin-top: 60px;
+    display: inline-block;
+    width: 20%;
+}
+

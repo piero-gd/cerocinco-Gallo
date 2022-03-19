@@ -1,0 +1,9 @@
+.item-detail {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.item-img, .right-col {
+    margin: 40px;
+}

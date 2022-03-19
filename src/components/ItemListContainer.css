@@ -1,12 +1,14 @@
 .item-list-container {
   display: flex;  
   justify-content: center;
-    margin-bottom: 20px;
-    flex-wrap: wrap;
-  }
+  padding: 20px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
 
   #greeting {
     margin-inline: 20%;
+    margin: 0;
   }
 /*  
 .item-list-container img {
