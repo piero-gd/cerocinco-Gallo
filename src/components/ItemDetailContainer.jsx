@@ -6,10 +6,6 @@ import { useParams } from 'react-router-dom'
 import { doc, getDoc } from 'firebase/firestore'
 import { db } from '../firebase'
 
-// Ir a buscar con el getItem la lista de productos
-// Filtrar 1 producto (elegir cualquiera)
-// Guardar en un estado propio ese producto
-// Pasarle ese producto al componente ItemDetail.js
 export default function ItemDetailContainer() {
     const [item, setItem] = useState()
     const { productId } = useParams()

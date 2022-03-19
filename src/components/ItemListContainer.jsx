@@ -4,15 +4,11 @@ import { getItems } from '../api/products'
 import ItemList from './ItemList'
 import { useParams } from "react-router-dom"
 
-// La función de este componente es obtener la lista de productos.
-// Guardarla en un estado propio (useState)
-// Y pasarsela a otro componente hijo.
 function ItemListContainer({ greeting, imgSrc }) {
     const [items, setItems] = useState([])
     const [loading, setLoading] = useState(true)
     const { catId } = useParams()
 
-    //tarea pesada (cuando se monta el componente)
     useEffect(() => {
         getItems
             .then((res) => {

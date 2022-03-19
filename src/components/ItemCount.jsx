@@ -28,15 +28,6 @@ const ItemCount = ({ stock, initial, onAddItem}) => {
     return (
         <div className="container-button">
             <div className="container-add-substract">
-
-                {/*<select onChange={onChangeItemCount}>
-                    {
-                        Array.from(Array(stock).keys()).map(function (num) {
-                            return <option key={num + 1} value={num + 1}>{num + 1}</option>
-                        })
-                    }
-                </select>*/}
-
                 <button onClick={add}>+</button>
                 <p>{number}</p>
                 <button onClick={substract}>-</button> 

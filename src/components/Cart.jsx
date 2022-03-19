@@ -50,7 +50,6 @@ function Cart() {
 
 
     return (
-        //react.fragment 
         <div>
             {cart.length === 0 ? (
                 <>

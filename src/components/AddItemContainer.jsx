@@ -27,8 +27,7 @@ const AddItemContainer = () => {
         console.log(category)
         console.log(description)
         //validacion campos vacios
-        //if([title, category, description].some(field => field === "")){
-        if (!(title === "" || category === "" || description === "")){
+        if([title, category, description].some(field => field === "")){
             //todo bien
 
             //inicialmente placeholder sin imagen

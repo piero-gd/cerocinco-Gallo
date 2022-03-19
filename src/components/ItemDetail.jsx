@@ -6,12 +6,10 @@ import ItemCount from './ItemCount'
 
 export default function ItemDetail({ item }) {
     const [showButton, setShowButton] = useState(false)
-    //const [itemAmount, setItemAmount] = useState(undefined)
     const { addToCart } = useContext(CartContext)
 
     function onAddItem(cantidad) {
         setShowButton(true)
-        //setItemAmount(cantidad)
         addToCart(cantidad, item)
     }
 
