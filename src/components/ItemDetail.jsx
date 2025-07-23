@@ -29,7 +29,7 @@ export default function ItemDetail({ item }) {
             <div className="card border-0 shadow-sm">
                 <div className="row g-0">
                     <div className="col-md-6 p-4 d-flex align-items-center justify-content-center">
-                        <div className="position-relative product-img-container">
+                        <div className="position-relative product-detail-container">
                             {isNewProduct && (
                                 <span className="badge bg-success position-absolute top-0 start-0 m-2 z-index-1">
                                     NUEVO
@@ -44,7 +44,11 @@ export default function ItemDetail({ item }) {
                                 src={item.img} 
                                 alt={item.name}
                                 className="img-fluid transition-transform product-detail-img" 
-                                style={{ maxHeight: '400px', objectFit: 'contain' }}
+                                style={{ 
+                                    objectFit: 'contain',
+                                    width: 'auto',
+                                    maxHeight: '400px'
+                                }}
                             />
                         </div>
                     </div>
