@@ -20,7 +20,7 @@ function App() {
             <Route path="/item/:productId" element={<ItemDetailContainer />} />
             <Route path="/Cart" element={<Cart />} />
             <Route exact path="/item/add" element={<AddItemContainer />} />
-            <Route path="*" element={<Error></Error>} />
+            <Route path="*" element={<Error />} />
           </Routes>
         </div>
       

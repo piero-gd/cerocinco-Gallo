@@ -1,5 +1,5 @@
 import './ItemDetailContainer.css'
-
+import '../styles/custom.css'
 import { useEffect, useState } from "react"
 import ItemDetail from './ItemDetail'
 import { useParams } from 'react-router-dom'
@@ -29,9 +29,14 @@ export default function ItemDetailContainer() {
 
 
     return (
-        <div className='item-detail-container'>
+        <div className='container py-4'>
             {!item ? (
-                <p>Cargando producto...</p>
+                <div className="d-flex flex-column justify-content-center align-items-center" style={{minHeight: '60vh'}}>
+                    <div className="spinner-border text-primary mb-3" role="status" style={{width: '3rem', height: '3rem'}}>
+                        <span className="visually-hidden">Cargando...</span>
+                    </div>
+                    <p className="text-muted spinner-text">Cargando detalle del producto...</p>
+                </div>
             ) : (
                 <>
                     <ItemDetail item={item} />
